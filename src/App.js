@@ -1,14 +1,39 @@
 import React, { Component } from 'react';
+import AppShell from './AppShell';
+import Grid from 'material-ui/Grid';
 import {
 	Route,
 	BrowserRouter as Router,
 	NavLink,
+	Switch,
 	Redirect,
 	Link
 } from 'react-router-dom';
 import Button from './Button';
+import About from './About'; 
+import Content from './Content'; 
+import Contact from './Contact';
 
-class App extends Component {
+export class App extends Component { 
+	render() { 
+		return ( 
+				<div>
+				 <Router>
+					  <div> 
+					  <AppShell/> 
+						  <Switch> 
+							  <Route exact path='/' component={Content}/> 
+							  <Route path='/About' component={About}/> 
+							  <Route path='/Contact' component={Contact}/> 
+						  </Switch> 
+					  </div> 
+				  </Router> 
+				</div> 
+		 	); 
+		} 
+	}
+
+/*class App extends Component {
   constructor(){
   	super();
   	this.state={isi:[]}
@@ -49,7 +74,7 @@ class App extends Component {
   	let button = this.state.isi.map(value => (<Button key={i++} isi = {value}/>));
     return (
     <div>
-      <h1>Hello world</h1>
+      {<h1>Hello world</h1>
       <p>Selamat Datang</p>
       {button}
       <Router>
@@ -64,11 +89,13 @@ class App extends Component {
 			<Route path="/Contact" component={Contact}/>
 		</div>
 	</Router>
+	}
+		<AppShell />
     </div>
     );
     
   }
   
-}
+}*/
 
 export default App;
