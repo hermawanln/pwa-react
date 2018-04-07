@@ -12,6 +12,7 @@ const styles = theme => ({
 		flexGrow: 1,
 		paddingLeft: 20,
 		paddingRight:20,
+		paddingTop: 85,
 	},
 	paper: {
 		height: 140,

@@ -13,6 +13,18 @@ import Button from './Button';
 import About from './About'; 
 import Content from './Content'; 
 import Contact from './Contact';
+import firebase from 'firebase';
+
+var config = {
+    apiKey: "AIzaSyAMUZogpzqMoJnFgtzNVSrxeW_iBUVb3SA",
+    authDomain: "pelatihan-pwa-ic.firebaseapp.com",
+    databaseURL: "https://pelatihan-pwa-ic.firebaseio.com",
+    projectId: "pelatihan-pwa-ic",
+    storageBucket: "pelatihan-pwa-ic.appspot.com",
+    messagingSenderId: "85360806419"
+  };
+  firebase.initializeApp(config);
+
 
 export class App extends Component { 
 	render() { 

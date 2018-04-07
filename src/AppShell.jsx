@@ -96,30 +96,30 @@ class TemporaryDrawer extends React.Component {
 	);
 		return (
 		<div>
-		<div className={classes.root}>
-		<AppBar position="fixed">
-		<Toolbar>
-		<IconButton onClick={this.toggleDrawer('left', true)} 
-		className={classes.menuButton} color="inherit" aria-label="Menu">
-		<MenuIcon />
-		</IconButton>
-		<Typography variant="title" color="inherit" 
-		className={classes.flex}>
-		Progressive Web App
-		</Typography>
-		<Button color="inherit">Login</Button>
-		</Toolbar>
-		</AppBar>
-		</div>
-		<Drawer open={this.state.left} 
-		onClose={this.toggleDrawer('left', false)}>
-		<div
-		tabIndex={0}
-		role="button"
-		onKeyDown={this.toggleDrawer('left', false)}>
-		{sideList}
-		</div>
-		</Drawer>
+			<div className={classes.root}>
+				<AppBar position="fixed">
+					<Toolbar>
+						<IconButton onClick={this.toggleDrawer('left', true)} 
+						className={classes.menuButton} color="inherit" aria-label="Menu">
+						<MenuIcon />
+						</IconButton>
+						<Typography variant="title" color="inherit" 
+						className={classes.flex}>
+						Hermawan PWA
+						</Typography>
+						<Button color="inherit">Login</Button>
+					</Toolbar>
+				</AppBar>
+			</div>
+			<Drawer open={this.state.left} 
+			onClose={this.toggleDrawer('left', false)}>
+			<div
+			tabIndex={0}
+			role="button"
+			onKeyDown={this.toggleDrawer('left', false)}>
+			{sideList}
+			</div>
+			</Drawer>
 		</div>
 		);
 	}
